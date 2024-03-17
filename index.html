@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <title>Agend.AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body data-bs-theme="light">
+
+<header>
+    <nav class="navbar-expand-lg navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="./assets/logo.png" alt="Logo da agend.AI"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="./assets/logo-mobile.png" alt="Logo da cafeteria Serenatto"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="modo-noturno">
+                                    <label class="form-check-label" for="modo-noturno">Modo noturno</label>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="banners banner-1 d-flex flex-column justify-content-center text-center">
+        <div class="banners-titulo bg-body-secondary py-5">
+            <h2 class="fw-bold">Transformando compromissos em experiências agradáveis.</h2>
+            <p>Boas-vindas ao agend.AI! Serviços sob demanda com um clique.</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <h2 class="text-center fw-bold pb-1">Agende os seus serviços</h2>
+        <div class="container d-flex justify-content-around flex-wrap">
+            <div class="card m-4" style="width: 20rem;">
+                <img src="./assets/acad-card.jpg" class="card-img-top" alt="academia com alguns pesos, máquinas e iluminação">
+                <div class="card-body">
+                    <h5 class="card-title py-2 fw-bold">Saúde</h5>
+                    <p class="card-text">Nosso serviço de saúde oferece uma ampla variedade de médicos, dentistas, aulas de pilates, nutricionista e personal-trainer. Uma excelente opção para quem busca benefícios na saúde física.</p>
+                    <a href="#" class="btn botao-padrao w-100 fw-bold" data-bs-toggle="offcanvas" data-bs-target="#canvas-1" aria-controls="offcanvasRight">Quero detalhes</a>
+                </div>
+            </div>
+            <div class="card m-4" style="width: 20rem;">
+                <img src="./assets/cabeleleiro-card.jpg" class="card-img-top" alt="Itens de estética e Beleza em cima da mesa junto com rosas">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Estética</h5>
+                    <p class="card-text">Para quem deseja cortar o cabelo ou fazer as unhas perto de casa, mostramos os serviços mais próximos de você. Com a mesma variedade de sempre e sem perder o nosso padrão de qualidade.</p>
+                    <a href="#" class="btn botao-padrao w-100 fw-bold mt-3" data-bs-toggle="offcanvas" data-bs-target="#canvas-2" aria-controls="offcanvasRight">Quero detalhes</a>
+                </div>
+            </div>
+            <div class="card m-4" style="width: 20rem;">
+                <img src="./assets/lava_jato-card.jpg" class="card-img-top" alt="Carro sendo limpo no lava-jato">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Serviços Gerais</h5>
+                    <p class="card-text">Para esperar no conforto de casa enquanto produzimos seu pet, mostramos o pet-shop mais próximo de você. E também te indicamos o lava-jato para deixar seu automóvel brilhando.</p>
+                    <a href="#" class="btn botao-padrao w-100 fw-bold mt-3" data-bs-toggle="offcanvas" data-bs-target="#canvas-3" aria-controls="offcanvasRight">Quero detalhes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banners banner-2 d-flex flex-column justify-content-center">
+        <div class="banners-titulo bg-body-secondary text-center py-5">
+            <h2 class="fw-bold">Em qualquer lugar, a qualquer momento.</h2>
+            <p>As nossas indicações te dão os lugares mais bem avaliados e mais próximos de você, prezando sempre o seu conforto.</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <h2 class="fw-bold text-center pb-1">Nossos serviços</h2>
+        <div class="row mx-0">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-1" style="width: 12rem;">
+                    <img src="./assets/medico.png" class="card-img-top" alt="Icon do Médico.">
+                    <div class="card-body">
+                        <h3 class="card-text text-center fw-bold">Médicos</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-2" style="width: 12rem;">
+                    <img src="./assets/dentista.png" class="card-img-top" alt="Icon do dentista">
+                    <div class="card-body">
+                        <h3 class="card-text fw-bold text-center">Dentistas</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-3" style="width: 12rem;">
+                    <img src="./assets/cabeleleiro.png" class="card-img-top" alt="Icon do cabeleireiro">
+                    <div class="card-body">
+                        <h3 class="card-text fw-bold text-center">Cabeleireiro</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-4" style="width: 12rem;">
+                    <img src="./assets/gym.png" class="card-img-top" alt="Icon do Personal-Trainer.">
+                    <div class="card-body">
+                        <h3 class="card-text text-center fw-bold">Personal-Trainer</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-5" style="width: 12rem;">
+                    <img src="./assets/petshop.png" class="card-img-top" alt="Icon do Pet-Shop.">
+                    <div class="card-body">
+                        <h3 class="card-text text-center fw-bold">Pet-Shop</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-6" style="width: 12rem;">
+                    <img src="./assets/pilates.png" class="card-img-top" alt="Icon do Pilates.">
+                    <div class="card-body">
+                        <h3 class="card-text text-center fw-bold">Pilates</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-7" style="width: 12rem;">
+                    <img src="./assets/manicure.png" class="card-img-top" alt="Icon do Manicure.">
+                    <div class="card-body">
+                        <h3 class="card-text text-center fw-bold">Manicure</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-8" style="width: 12rem;">
+                    <img src="./assets/nutricionista.png" class="card-img-top" alt="Icon do Nutricionista.">
+                    <div class="card-body">
+                        <h3 class="card-text text-center fw-bold">Nutricionista</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-9" style="width: 12rem;">
+                    <img src="./assets/lava-jato.png" class="card-img-top" alt="Icon do Lava-Jato.">
+                    <div class="card-body">
+                        <h3 class="card-text text-center fw-bold">Lava-Jato</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banners banner-3">
+    </section>
+
+    <section class="py-4 container">
+        <div class="row">
+            <div class="col-10 col-xl-8 mx-auto">
+                <div class="border border-2 rounded p-3">
+                    <h3 class="fw-bold p-3">Entre em contato!</h3>
+                    <form id="contato">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingNome" placeholder="Nome">
+                            <label for="floatingNome">Nome</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                            <label for="floatingEmail">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="tel" class="form-control" id="floatingTelefone" placeholder="Telefone">
+                            <label for="floatingTelefone">Telefone</label>
+                        </div>
+                        <select class="form-select mb-3" aria-label="Default select example">
+                            <option selected>Preferência de contato:</option>
+                            <option value="1">WhatsApp</option>
+                            <option value="2">Email</option>
+                            <option value="3">Ligação</option>
+                        </select>
+                        <label for="nivel-satisfacao" class="form-label">Nível de satisfação:</label>
+                        <input type="range" class="form-range input-range" id="nivel-satisfacao">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Deseja receber novidades por email?
+                            </label>
+                        </div>
+                        <button type="button" class="btn botao-padrao w-100 fw-bold mt-3 py-3">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <section class="container p-4 pb-0 mb-4">
+            <a class="btn" href="https://github.com/Eds0nJun1or"><i class="bi bi-github"></i></a>
+            <a class="btn" href="https://www.instagram.com/ed_jr10/"><i class="bi bi-instagram"></i></a>
+            <a class="btn" href="https://www.linkedin.com/in/edjr10/"><i class="bi bi-linkedin"></i></a>
+        </section>
+        <div class="p-3">
+            2024 <i class="bi bi-c-circle"></i> Desenvolvido por Edson Gonçalves | Projeto acadêmico.
+        </div>
+    </footer>
+        
+
+<!-- canvas 1 -->
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-1" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Saúde</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Nutricionista
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Os nutricionistas oferecem orientação personalizada, ajudam a alcançar metas de saúde e educam sobre a importância da nutrição adequada para uma vida melhor.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Médico
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Médicos desempenham um papel vital na saúde e bem-estar, fornecendo diagnóstico, tratamento e prevenção de doenças. Investir nos serviços médicos fortalece a relação com os clientes e demonstra compromisso com o cuidado e a segurança da comunidade.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeDentista" aria-expanded="false" aria-controls="collapseThreeDentista">
+            Dentista
+          </button>
+        </h2>
+        <div id="collapseThreeDentista" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Seu cuidado promove sorrisos saudáveis, confiança e bem-estar geral dos pacientes. Investir nos serviços de um dentista demonstra compromisso com a saúde da comunidade, fortalecendo seus relacionamentos.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreePersonal" aria-expanded="false" aria-controls="collapseThreePersonal">
+            Personal-Trainer
+          </button>
+        </h2>
+        <div id="collapseThreePersonal" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Oferecemos serviços de personal trainer personalizados, focados em alcançar objetivos de condicionamento físico de forma segura e eficaz. Com uma equipe experiente e motivadora, utilizamos técnicas avançadas para maximizar resultados e promover hábitos saudáveis.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourPilates" aria-expanded="false" aria-controls="collapseFourPilates">
+            Pilates
+          </button>
+        </h2>
+        <div id="collapseFourPilates" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Oferecemos serviços de Pilates personalizados para fortalecer o corpo, melhorar a postura e promover o bem-estar geral. Com instrutores especializados e técnicas específicas, nosso objetivo é proporcionar uma prática segura e eficaz para todos os níveis de habilidade.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+<!-- Canvas 2 -->
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-2" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Estética</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse"
+            data-bs-target="#accordionEventos" aria-expanded="false" aria-controls="collapseOne">
+            Manicure
+          </button>
+        </h2>
+        <div id="accordionEventos" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Serviços de manicure que vão além da estética, promovendo cuidados completos para as mãos. 
+            Seja para uma ocasião especial ou para se mimar, nossos serviços garantem mãos bonitas e bem cuidadas.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse"
+            data-bs-target="#accordionCatering" aria-expanded="false" aria-controls="collapseOne">
+            Cabeleleiro
+          </button>
+        </h2>
+        <div id="accordionCatering" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Oferecemos serviços de cabeleireiro completos, desde cortes modernos até tratamentos capilares especializados.
+            Seja para uma mudança radical ou uma atualização sutil, nossos serviços garantem cabelos bonitos e saudáveis.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Canvas 3 -->
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-3" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Serviços Gerais</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="accordion" id="accordionExample2">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse"
+            data-bs-target="#accordionEncomendas" aria-expanded="false" aria-controls="collapseOne">
+            Pet-Shop
+          </button>
+        </h2>
+        <div id="accordionEncomendas" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+          <div class="accordion-body">
+            Oferecemos serviços completos de pet shop, incluindo banho, tosa, cuidados veterinários e produtos especializados.
+            Seja para cuidados básicos ou para mimos especiais, nossos serviços proporcionam uma experiência completa para os pets.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse"
+            data-bs-target="#accordionEntrega" aria-expanded="false" aria-controls="collapseOne">
+            Lava-Jato
+          </button>
+        </h2>
+        <div id="accordionEntrega" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+          <div class="accordion-body">
+            Oferecemos serviços completos de lava-jato, desde lavagens simples até polimento e detalhamento. 
+            Com uma equipe dedicada e equipamentos modernos, garantimos resultados excepcionais para manter os veículos limpos, brilhantes e bem cuidados.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 1 -->
+<div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5 fw-bold" id="modalLabel1">Médico</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./assets/medico.png" class="w-100" alt="Imagem Icon Médico">
+        <p>Oferecemos serviços médicos abrangentes e personalizados para promover a saúde física e mental de nossos pacientes.</p>
+        <p>Com uma equipe qualificada, proporcionamos diagnósticos precisos, tratamentos eficazes e cuidados compassivos para atender às necessidades de saúde de toda a comunidade.</p>
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">Fechar janela</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5 fw-bold" id="modalLabel2">Dentistas</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./assets/dentista.png" class="w-100" alt="Icon do Dentista">
+        <p>Nossos serviços odontológicos visam fornecer cuidados completos e personalizados para a saúde bucal de nossos pacientes. Com uma equipe qualificada e experiente, oferecemos desde consultas de rotina até tratamentos especializados, garantindo sorrisos saudáveis e confiantes para todos.</p>
+        <p>Seja para check-ups regulares, tratamentos de cárie, implantes dentários ou estética do sorriso, nossos serviços odontológicos estão aqui para atender às necessidades de saúde bucal de toda a família. Venha nos visitar e descubra como podemos ajudá-lo a alcançar e manter uma saúde bucal excelente!</p>
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">Fechar janela</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="modal-3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5 fw-bold" id="modalLabel3">Cabeleleiro</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./assets/cabeleleiro.png" class="w-100" alt="Icon do Cabeleleiro">
+        <p>Nossos serviços de cabeleireiro visam fornecer cuidados completos e personalizados para atender às necessidades de nossos clientes. Com uma equipe qualificada e experiente, oferecemos cortes de cabelo, coloração, tratamentos capilares e muito mais, garantindo satisfação e estilo para todos.</p>
+        <p>Seja para uma mudança radical de visual ou apenas para manter o seu corte em dia, estamos aqui para ajudar. Venha nos visitar e descubra como podemos transformar seu cabelo em uma verdadeira obra-prima!</p>
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">Fechar janela</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="modal-4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5 fw-bold" id="modalLabel4">Personal-Trainer</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./assets/gym.png" class="w-100" alt="Icon do Personal-Trainer">
+        <p>Ser personal trainer é guiar clientes em treinos personalizados para atingir objetivos de fitness.</p>
+        <p>Com programas adaptados, oferecemos suporte emocional e motivacional para alcançar resultados sustentáveis e duradouros.</p>
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">Fechar janela</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 5 -->
+<div class="modal fade" id="modal-5" tabindex="-1" aria-labelledby="modalLabel5" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5 fw-bold" id="modalLabel5">Pet-Shop</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./assets/petshop.png" class="w-100" alt="Icon do Pet-Shop">
+        <p>Ser proprietário de um pet shop significa oferecer uma experiência completa de cuidados e bem-estar para os animais de estimação e seus donos.</p>
+        <p>Meu objetivo é garantir a saúde, felicidade e satisfação de cada cliente e seu animal de estimação.</p>
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">Fechar janela</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 6 -->
+<div class="modal fade" id="modal-6" tabindex="-1" aria-labelledby="modalLabel6" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5 fw-bold" id="modalLabel6">Pilates</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./assets/pilates.png" class="w-100" alt="Icon do Pilates">
+        <p>Ofereço aulas de Pilates personalizadas, priorizando a saúde física e mental dos alunos. </p>
+        <p>Utilizando técnicas avançadas e equipamentos específicos, meu objetivo é promover força, flexibilidade e equilíbrio, proporcionando uma experiência holística de bem-estar.</p>
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">Fechar janela</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 7 -->
+<div class="modal fade" id="modal-7" tabindex="-1" aria-labelledby="modalLabel7" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5 fw-bold" id="modalLabel7">Manicure</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./assets/manicure.png" class="w-100" alt="Icon da Manicure">
+        <p>Com uma equipe experiente, utilizamos produtos de qualidade para garantir resultados excepcionais.</p>
+        <p>Utilizando técnicas avançadas e equipamentos específicos, meu objetivo é promover força, flexibilidade e equilíbrio, proporcionando uma experiência holística de bem-estar</p>
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">Fechar janela</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 8 -->
+<div class="modal fade" id="modal-8" tabindex="-1" aria-labelledby="modalLabel8" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5 fw-bold" id="modalLabel8">Nutricionista</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./assets/nutricionista.png" class="w-100" alt="Icon da Nutricionista">
+        <p>Oferecemos serviços de nutrição especializados para promover uma alimentação saudável e equilibrada.</p>
+        <p>Com uma equipe qualificada, fornecemos orientação personalizada para atender às necessidades específicas de cada cliente, visando melhorar a saúde e o bem-estar.</p>
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">Fechar janela</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 9 -->
+<div class="modal fade" id="modal-9" tabindex="-1" aria-labelledby="modalLabel9" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5 fw-bold" id="modalLabel9">Lava-Jato</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="./assets/lava-jato.png" class="w-100" alt="Icon da Lava-Jato">
+        <p>Com uma equipe dedicada e equipamentos modernos, proporcionamos desde lavagens simples até polimento e detalhamento completo.</p>
+        <p>Nosso objetivo é garantir a satisfação dos clientes, proporcionando uma experiência de limpeza eficaz e conveniente para seus veículos.</p>
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">Fechar janela</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+  crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+</body>
+
+</html>
+
